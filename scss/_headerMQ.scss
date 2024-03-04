@@ -1,0 +1,32 @@
+@use "variables";
+@use "mixinsAndExtends";
+
+@media screen and (max-width:490px) {
+    body{
+        header{
+            margin-right: .6rem;
+        }
+        .header__fixed{
+            margin: .9rem;
+        }
+    }
+}
+
+@media screen and (max-height:430px) and (orientation:landscape){
+    body{
+        header{
+            .nav__container{
+                .nav__list{
+                    .nav__heading{
+                        font-size: 1em;
+                    }
+                    .nav__lang{
+                        font-size: .7em;
+                        gap: 1rem;
+                    }
+                }
+
+            }
+        }
+    }
+}

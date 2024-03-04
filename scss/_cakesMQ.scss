@@ -1,0 +1,51 @@
+@media screen and (max-width: 600px){
+    .main__cakes{
+        padding: 2rem;
+        .cakes__container{
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            gap: 1rem;
+            .container__list{
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-flow: column;
+                        flex-flow: column;
+                &:nth-child(even){
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-flow: column;
+                            flex-flow: column;
+                }
+                .list__desc {
+    
+                    &:last-child{
+                        gap: 2rem;
+                    }
+                }
+            }
+        } 
+    }
+}
+@media screen and (max-width:800px){
+    .main__cakes{
+        padding: 2rem;
+        .cakes__container{
+            
+            gap: 1rem;
+            .container__list{
+                
+                .list__desc {
+                    
+                    
+                    &:last-child{
+                        gap: 2rem;
+                    }
+                }
+            }
+        } 
+    }
+}
