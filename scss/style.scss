@@ -1,0 +1,40 @@
+//pre-work
+@use "sanitize";
+@use "foundation";
+@use "variables";
+@use "mixinsAndExtends";
+
+//header right
+@use "header";
+@use "headerMQ";
+
+//menu left
+@use "menu";
+@use "menuMQ";
+
+//home
+@use "home";
+@use "homeMQ";
+
+//about
+@use "about";
+@use "aboutMQ";
+
+//services
+@use "services";
+@use "servicesMQ";
+
+//all,sweets, nonSweets
+@use "all";
+@use "allMQ";
+
+//cakes
+@use "cakes";
+@use "cakesMQ";
+
+
+
+//fonts
+@import url('https://db.onlinewebfonts.com/c/d8436a566897114f1cb5d935780cf174?family=Granjon+LT+W01+Roman');
+@import url('https://db.onlinewebfonts.com/c/f4829115b4b155e1f9d5364dfc1c5300?family=Adobe+Garamond+W01+Bd');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300&display=swap')

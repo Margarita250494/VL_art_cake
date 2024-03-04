@@ -1,0 +1,46 @@
+@use "variables";
+@use "mixinsAndExtends";
+
+@media screen and (max-width: 490px){
+    body{
+        .menu{
+            margin-left: 1.6rem;
+        }
+    }
+}
+
+@media screen and (max-height:430px) and (orientation:landscape){
+    body{
+        .menu{
+            height: 100%;
+            .main__menu{
+                a{
+                    font-size: 1em;
+                }
+                .main__navigation{
+                    .item-flex{
+                        .dropdown__items{
+                            gap: .2rem;
+                            a{
+                                font-size: .8em;
+                            }
+                        }
+                    }
+                }
+                .contacts__navigation{
+                    h3{
+                        font-size: 1em;
+                    }
+                    .contacts__list{
+                        .contacts__item{
+                            a{
+                                font-size:.8em;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

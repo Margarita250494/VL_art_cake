@@ -1,0 +1,161 @@
+@use "variables";
+@use "mixinsAndExtends";
+
+.main__cakes {
+    opacity: 0;
+    -webkit-transition: variables.$transition-opacity;
+    -o-transition: variables.$transition-opacity;
+    transition: variables.$transition-opacity;
+    position: absolute;
+    padding: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    gap: 3.5rem;
+    width: 100%;
+    .cakes__container {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+        flex-flow: column wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 3.5rem;
+        -webkit-transition: variables.$transition-quick;
+        -o-transition: variables.$transition-quick;
+        transition: variables.$transition-quick;
+
+        .container__list {
+            -webkit-transition: variables.$transition-quick;
+
+            -o-transition: variables.$transition-quick;
+
+            transition: variables.$transition-quick;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: row;
+            flex-flow: row;
+            -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+            width: 100%;
+            &:nth-child(even) {
+                -webkit-transition: variables.$transition-quick;
+                -o-transition: variables.$transition-quick;
+                transition: variables.$transition-quick;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: reverse;
+                -ms-flex-flow: row-reverse;
+                flex-flow: row-reverse;
+            }
+            .list__img {
+                padding: 2rem;
+                img {
+                    -webkit-transition: variables.$transition-quick;
+                    -o-transition: variables.$transition-quick;
+                    transition: variables.$transition-quick;
+                    max-width: 100%;
+                    max-block-size: 28rem;
+                }
+            }
+            .list__desc {
+                -webkit-transition: variables.$transition-quick;
+
+                -o-transition: variables.$transition-quick;
+
+                transition: variables.$transition-quick;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-flow: column;
+                flex-flow: column;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                gap: 2rem;
+                padding: 2rem;
+                h1 {
+                    -webkit-transition: variables.$transition-quick;
+                    -o-transition: variables.$transition-quick;
+                    transition: variables.$transition-quick;
+                    @include mixinsAndExtends.fonts(
+                        variables.$font_heading,
+                        clamp(1.9em, 3.5vw, 2.5em),
+                        variables.$font_weight
+                    );
+                }
+                p {
+                    -webkit-transition: variables.$transition-quick;
+                    -o-transition: variables.$transition-quick;
+                    transition: variables.$transition-quick;
+                    @include mixinsAndExtends.fonts(
+                        variables.$font_heading,
+                        clamp(1em, 2.5vw, 1.2em),
+                        variables.$font_weight
+                    );
+                    line-height: 1.5em;
+                    text-align: center;
+                    max-width: 40ch;
+                }
+                .cakes__order {
+                    padding-top: 3rem;
+                    -webkit-transition: variables.$transition-quick;
+                    -o-transition: variables.$transition-quick;
+                    transition: variables.$transition-quick;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-flow: column;
+                    flex-flow: column;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .order__social {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-orient: horizontal;
+                        -webkit-box-direction: normal;
+                        -ms-flex-flow: row;
+                        flex-flow: row;
+                        gap: 1rem;
+                        a {
+                            i {
+                                color: rgb(75, 73, 73);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

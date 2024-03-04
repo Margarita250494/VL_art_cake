@@ -1,0 +1,22 @@
+@use "variables";
+@use "mixinsAndExtends";
+
+
+body {
+    .background__image {
+        position: absolute;
+        background-image: url("/img/background.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        aspect-ratio: 1/1;
+        background-size: cover;
+        -o-object-fit: cover;
+        object-fit: cover;
+        @include mixinsAndExtends.size(100dvw, 100dvh);
+        opacity: 0;
+        -webkit-transition: variables.$transition-opacity;
+        -o-transition: variables.$transition-opacity;
+        transition: variables.$transition-opacity;
+    }
+}
+
