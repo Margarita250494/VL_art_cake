@@ -1360,14 +1360,14 @@ body .main__services .services__social .social__list a {
   -ms-flex-flow: column;
   flex-flow: column;
   gap: 2rem;
-  width: 220px;
+  width: 225px;
 }
 .main__all .all__container .all__list .list__items .item__card .card__info .card__name {
   text-align: center;
-  max-width: 220px;
-  height: 85px;
+  max-width: 225px;
+  height: 95px;
   font-family: "Cormorant Infant", serif;
-  font-size: clamp(1.15em, 3.5vw, 1.4em);
+  font-size: clamp(1em, 3.5vw, 1.3em);
   font-weight: normal;
 }
 .main__all .all__container .all__list .list__items .item__card .card__info .info__order {
@@ -1385,7 +1385,7 @@ body .main__services .services__social .social__list a {
 }
 .main__all .all__container .all__list .list__items .item__card .card__info .info__order .price {
   font-family: "Cormorant Infant", serif;
-  font-size: clamp(1em, 3.5vw, 1.1em);
+  font-size: clamp(0.7em, 3.5vw, 1em);
   font-weight: normal;
 }
 .main__all .all__container .all__list .list__items .item__card .card__info .info__order .order__social {
@@ -1403,16 +1403,16 @@ body .main__services .services__social .social__list a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 .main__all .all__container .all__list .list__items .item__card .card__info .info__order .order__social span {
   font-family: "Cormorant Infant", serif;
-  font-size: clamp(1em, 3.5vw, 1.1em);
+  font-size: clamp(0.7em, 3.5vw, 1em);
   font-weight: normal;
 }
 .main__all .all__container .all__list .list__items .item__card .card__info .info__order .order__social i {
   color: rgb(75, 73, 73);
-  font-size: clamp(1.1em, 3.5vw, 1.3em);
+  font-size: clamp(1em, 3.5vw, 1.2em);
 }
 
 @media screen and (max-width: 490px) {
