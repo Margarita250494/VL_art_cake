@@ -1,0 +1,1680 @@
+@charset "UTF-8";
+@import url("https://db.onlinewebfonts.com/c/d8436a566897114f1cb5d935780cf174?family=Granjon+LT+W01+Roman");
+@import url("https://db.onlinewebfonts.com/c/f4829115b4b155e1f9d5364dfc1c5300?family=Adobe+Garamond+W01+Bd");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300&display=swap");
+/* Document
+ * ========================================================================== */
+/**
+ * 1. Add border box sizing in all browsers (opinionated).
+ * 2. Backgrounds do not repeat by default (opinionated).
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  background-repeat: no-repeat; /* 2 */
+}
+
+/**
+ * 1. Add text decoration inheritance in all browsers (opinionated).
+ * 2. Add vertical alignment inheritance in all browsers (opinionated).
+ */
+::before,
+::after {
+  text-decoration: inherit; /* 1 */
+  vertical-align: inherit; /* 2 */
+}
+
+/**
+ * 1. Use the default cursor in all browsers (opinionated).
+ * 2. Change the line height in all browsers (opinionated).
+ * 3. Breaks words to prevent overflow in all browsers (opinionated).
+ * 4. Use a 4-space tab width in all browsers (opinionated).
+ * 5. Remove the grey highlight on links in iOS (opinionated).
+ * 6. Prevent adjustments of font size after orientation changes in iOS.
+ */
+:where(:root) {
+  cursor: default; /* 1 */
+  line-height: 1.5; /* 2 */
+  overflow-wrap: break-word; /* 3 */
+  -moz-tab-size: 4; /* 4 */
+  tab-size: 4; /* 4 */
+  -webkit-tap-highlight-color: transparent; /* 5 */
+  -webkit-text-size-adjust: 100%; /* 6 */
+  text-size-adjust: 100%; /* 6 */
+}
+
+/* Sections
+ * ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+:where(body) {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Edge, Firefox, and Safari.
+ */
+:where(h1) {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+ * ========================================================================== */
+/**
+ * Remove the margin on nested lists in Chrome, Edge, and Safari.
+ */
+:where(dl, ol, ul) :where(dl, ol, ul) {
+  margin: 0;
+}
+
+/**
+ * 1. Correct the inheritance of border color in Firefox.
+ * 2. Add the correct box sizing in Firefox.
+ */
+:where(hr) {
+  color: inherit; /* 1 */
+  height: 0; /* 2 */
+}
+
+/**
+ * Remove the list style on navigation lists in all browsers (opinionated).
+ */
+:where(nav) :where(ol, ul) {
+  list-style-type: none;
+  padding: 0;
+}
+
+/**
+ * Prevent VoiceOver from ignoring list semantics in Safari (opinionated).
+ */
+:where(nav li)::before {
+  content: "​";
+  float: left;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ * 3. Prevent overflow of the container in all browsers (opinionated).
+ */
+:where(pre) {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+  overflow: auto; /* 3 */
+}
+
+/* Text-level semantics
+ * ========================================================================== */
+/**
+ * Add the correct text decoration in Safari.
+ */
+:where(abbr[title]) {
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+:where(b, strong) {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+:where(code, kbd, samp) {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+:where(small) {
+  font-size: 80%;
+}
+
+/* Embedded content
+ * ========================================================================== */
+/*
+ * Change the alignment on media elements in all browsers (opinionated).
+ */
+:where(audio, canvas, iframe, img, svg, video) {
+  vertical-align: middle;
+}
+
+/**
+ * Remove the border on iframes in all browsers (opinionated).
+ */
+:where(iframe) {
+  border-style: none;
+}
+
+/**
+ * Change the fill color to match the text color in all browsers (opinionated).
+ */
+:where(svg:not([fill])) {
+  fill: currentColor;
+}
+
+/* Tabular data
+ * ========================================================================== */
+/**
+ * 1. Collapse border spacing in all browsers (opinionated).
+ * 2. Correct table border color in Chrome, Edge, and Safari.
+ * 3. Remove text indentation from table contents in Chrome, Edge, and Safari.
+ */
+:where(table) {
+  border-collapse: collapse; /* 1 */
+  border-color: currentColor; /* 2 */
+  text-indent: 0; /* 3 */
+}
+
+/* Forms
+ * ========================================================================== */
+/**
+ * Remove the margin on controls in Safari.
+ */
+:where(button, input, select) {
+  margin: 0;
+}
+
+/**
+ * Correct the inability to style buttons in iOS and Safari.
+ */
+:where(button, [type=button i], [type=reset i], [type=submit i]) {
+  -webkit-appearance: button;
+}
+
+/**
+ * Change the inconsistent appearance in all browsers (opinionated).
+ */
+:where(fieldset) {
+  border: 1px solid #a0a0a0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Edge, and Firefox.
+ */
+:where(progress) {
+  vertical-align: baseline;
+}
+
+/**
+ * 1. Remove the margin in Firefox and Safari.
+ * 3. Change the resize direction in all browsers (opinionated).
+ */
+:where(textarea) {
+  margin: 0; /* 1 */
+  resize: vertical; /* 3 */
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+:where([type=search i]) {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+
+/**
+ * Remove the inner padding in Chrome, Edge, and Safari on macOS.
+ */
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style upload buttons in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+ * ========================================================================== */
+/*
+ * Add the correct styles in Safari.
+ */
+:where(dialog) {
+  background-color: white;
+  border: solid;
+  color: black;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+:where(dialog:not([open])) {
+  display: none;
+}
+
+/*
+ * Add the correct display in Safari.
+ */
+:where(details > summary:first-of-type) {
+  display: list-item;
+}
+
+/* Accessibility
+ * ========================================================================== */
+/**
+ * Change the cursor on busy elements in all browsers (opinionated).
+ */
+:where([aria-busy=true i]) {
+  cursor: progress;
+}
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements in all browsers (opinionated).
+ */
+:where([aria-disabled=true i], [disabled]) {
+  cursor: not-allowed;
+}
+
+/*
+ * Change the display on visually hidden accessible elements
+ * in all browsers (opinionated).
+ */
+:where([aria-hidden=false i][hidden]) {
+  display: initial;
+}
+
+:where([aria-hidden=false i][hidden]:not(:focus)) {
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  list-style: none;
+  -webkit-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  background-color: rgb(244, 235, 225);
+}
+
+a, i {
+  list-style: none;
+  text-decoration: none;
+}
+
+i {
+  display: inline-block;
+  font-size: 1em;
+  color: rgb(75, 73, 73);
+}
+
+li {
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  list-style: none;
+  -webkit-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+
+body .main__about .about__social .social__container a i:hover, body .menu .main__menu a:hover, header .nav__container .nav__list a:hover {
+  color: rgb(155, 155, 155);
+}
+
+header {
+  z-index: 2;
+  position: relative;
+  float: right;
+  height: 96dvh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-flow: row nowrap;
+}
+header .nav__container {
+  height: 100%;
+  width: 100%;
+}
+header .nav__container .nav__list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+header .nav__container .nav__list a {
+  color: rgb(0, 0, 0);
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  cursor: pointer;
+}
+header .nav__container .nav__list .nav__heading {
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1em, 3.5vw, 1.3em);
+  font-weight: normal;
+}
+header .nav__container .nav__list .nav__heading .item__heading a {
+  letter-spacing: 0.2em;
+}
+header .nav__container .nav__list .nav__lang {
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  gap: 2rem;
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(0.7em, 2.5vw, 1em);
+  font-weight: normal;
+}
+header .nav__container .nav__list .nav__lang .item__lang a {
+  letter-spacing: 0.16em;
+}
+header .nav__container .nav__list .nav__button {
+  display: block;
+  height: 40px;
+}
+header .nav__container .nav__list .nav__button a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: clamp(0.2rem, 0.5vw, 0.3rem);
+}
+header .nav__container .nav__list .nav__button a .arrow_1 {
+  width: 1px;
+  height: 30px;
+  background-color: rgb(70, 69, 69);
+  -webkit-animation: navigate_animation 4s cubic-bezier(0.45, 0.05, 0, 1) infinite;
+  animation: navigate_animation 4s cubic-bezier(0.45, 0.05, 0, 1) infinite;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+header .nav__container .nav__list .nav__button a .arrow_1:nth-of-type(1) {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+header .nav__container .nav__list .nav__button a .arrow_1:nth-of-type(2) {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+header .nav__container .nav__list .nav__button a .arrow_1:nth-of-type(3) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+header .nav__container .nav__list .nav__button .active {
+  gap: 0;
+}
+header .nav__container .nav__list .nav__button .active .arrow_1:first-of-type {
+  -webkit-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  -webkit-animation: navigate_close_1 4s cubic-bezier(0.45, 0.05, 0, 1) infinite;
+  animation: navigate_close_1 4s cubic-bezier(0.45, 0.05, 0, 1) infinite;
+}
+header .nav__container .nav__list .nav__button .active .arrow_1:last-of-type {
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+  -webkit-animation: navigate_close_2 4s cubic-bezier(0.45, 0.05, 0, 1) infinite;
+  animation: navigate_close_2 4s cubic-bezier(0.45, 0.05, 0, 1) infinite;
+}
+header .nav__container .nav__list .nav__button .active .arrow_1:nth-of-type(2) {
+  display: none;
+}
+
+.header__fixed .nav__container {
+  position: fixed;
+  padding: 0rem 2rem 1.5rem 1rem;
+}
+
+@-webkit-keyframes navigate_animation {
+  0% {
+    background-color: gray;
+    top: 0;
+    height: 30px;
+  }
+  10% {
+    top: 0;
+    height: 30px;
+    background-color: black;
+  }
+  30% {
+    top: 30px;
+    height: 0;
+    background-color: black;
+  }
+  31% {
+    top: 0;
+    background-color: black;
+  }
+  50% {
+    top: 0;
+    height: 30px;
+    background-color: black;
+  }
+  100% {
+    top: 0;
+    height: 30px;
+    background-color: gray;
+  }
+}
+@keyframes navigate_animation {
+  0% {
+    background-color: gray;
+    top: 0;
+    height: 30px;
+  }
+  10% {
+    top: 0;
+    height: 30px;
+    background-color: black;
+  }
+  30% {
+    top: 30px;
+    height: 0;
+    background-color: black;
+  }
+  31% {
+    top: 0;
+    background-color: black;
+  }
+  50% {
+    top: 0;
+    height: 30px;
+    background-color: black;
+  }
+  100% {
+    top: 0;
+    height: 30px;
+    background-color: gray;
+  }
+}
+@-webkit-keyframes navigate_close_1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-color: gray;
+  }
+  50% {
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+    background-color: black;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-color: gray;
+  }
+}
+@keyframes navigate_close_1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-color: gray;
+  }
+  50% {
+    -webkit-transform: rotate(-25deg);
+    transform: rotate(-25deg);
+    background-color: black;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-color: gray;
+  }
+}
+@-webkit-keyframes navigate_close_2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-color: gray;
+  }
+  50% {
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    background-color: black;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-color: gray;
+  }
+}
+@keyframes navigate_close_2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-color: gray;
+  }
+  50% {
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+    background-color: black;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    background-color: gray;
+  }
+}
+@media screen and (max-width: 490px) {
+  body header {
+    margin-right: 0.6rem;
+  }
+  body .header__fixed {
+    margin: 0.9rem;
+  }
+}
+@media screen and (max-height: 430px) and (orientation: landscape) {
+  body header .nav__container .nav__list .nav__heading {
+    font-size: 1em;
+  }
+  body header .nav__container .nav__list .nav__lang {
+    font-size: 0.7em;
+    gap: 1rem;
+  }
+}
+body .preloader__text {
+  position: absolute;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+body .preloader__text .preloader__name {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  text-align: center;
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1.3em, 2.5vw, 1.8em);
+  font-weight: normal;
+  color: rgb(0, 0, 0);
+}
+body .menu {
+  z-index: 2;
+  opacity: 0;
+  height: 96dvh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1rem 1rem 1rem 2.6rem;
+  position: absolute;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+}
+body .menu .main__menu {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+body .menu .main__menu a {
+  color: rgb(0, 0, 0);
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1.5em, 3.5vw, 2em);
+  font-weight: normal;
+}
+body .menu .main__menu .main__navigation {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+body .menu .main__menu .main__navigation .navigation__list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+body .menu .main__menu .main__navigation .item-flex svg {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+}
+body .menu .main__menu .main__navigation .item-flex svg.arrowTop {
+  -webkit-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+body .menu .main__menu .main__navigation .item-flex .dropdown__items {
+  position: relative;
+  left: 94%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+  -webkit-transform: translate(0px);
+  -ms-transform: translate(0px);
+  transform: translate(0px);
+  gap: 0.4rem;
+}
+body .menu .main__menu .main__navigation .item-flex .dropdown__items a {
+  font-size: clamp(1em, 2.5vw, 1.2em);
+}
+body .menu .main__menu .main__navigation .item-flex .dropdown__items.open-menu {
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  visibility: visible;
+  opacity: 1;
+}
+body .menu .main__menu .contacts__navigation {
+  border-top: 0.5px solid black;
+  border-bottom: 0.5px solid #000000;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+body .menu .main__menu .contacts__navigation h3 {
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1.1em, 2.5vw, 1.4em);
+  font-weight: normal;
+}
+body .menu .main__menu .contacts__navigation .contacts__list {
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+body .menu .main__menu .contacts__navigation .contacts__list .contacts__item a {
+  font-size: clamp(1em, 2.5vw, 1.3em);
+}
+body .menu .main__menu .contacts__navigation .contacts__list .contacts__item a i {
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 490px) {
+  body .menu {
+    margin-left: 1.6rem;
+  }
+}
+@media screen and (max-height: 430px) and (orientation: landscape) {
+  body .menu {
+    height: 100%;
+  }
+  body .menu .main__menu a {
+    font-size: 1em;
+  }
+  body .menu .main__menu .main__navigation .item-flex .dropdown__items {
+    gap: 0.2rem;
+  }
+  body .menu .main__menu .main__navigation .item-flex .dropdown__items a {
+    font-size: 0.8em;
+  }
+  body .menu .main__menu .contacts__navigation h3 {
+    font-size: 1em;
+  }
+  body .menu .main__menu .contacts__navigation .contacts__list .contacts__item a {
+    font-size: 0.8em;
+  }
+}
+body .background__image {
+  position: absolute;
+  background-image: url("/img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 1/1;
+  background-size: cover;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100dvw;
+  height: 100dvh;
+  opacity: 0;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+body .main__about {
+  opacity: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+}
+body .main__about .about__social {
+  z-index: 3;
+  height: 100dvh;
+  padding: 1rem;
+}
+body .main__about .about__social .social__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+body .main__about .about__social .social__container a {
+  color: gray;
+  font-size: clamp(1em, 2.5vw, 1.2em);
+}
+body .main__about .about__social .social__container a i {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+}
+body .main__about .about__main {
+  -webkit-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  height: 100%;
+  width: -webkit-fill-available;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+body .main__about .about__main .about__img {
+  -webkit-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  display: block;
+  padding: 1rem;
+}
+body .main__about .about__main .about__img img {
+  max-width: 100%;
+  max-block-size: 23rem;
+}
+body .main__about .about__main .about__text {
+  padding: 1rem;
+  max-width: 90ch;
+  max-height: 100%;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+}
+body .main__about .about__main .about__text .text__container {
+  -webkit-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  gap: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+body .main__about .about__main .about__text .text__container p {
+  text-align: center;
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(0.75em, 2.5vw, 1.1em);
+  font-weight: normal;
+  color: rgb(57, 51, 51);
+}
+body .main__about .about__main .about__text .text__container p span {
+  color: black;
+  font-size: clamp(1.2em, 2.5vw, 1.3em);
+}
+
+@media screen and (max-width: 480px) {
+  body .main__about .about__main {
+    gap: 0;
+  }
+  body .main__about .about__main .about__text {
+    padding: 0.5rem;
+  }
+  body .main__about .about__main .about__text .text__container p {
+    width: 45ch;
+    color: rgb(15, 14, 14);
+  }
+}
+@media screen and (min-width: 668px) and (max-width: 1080px) {
+  body .main__about .about__main .about__text {
+    max-width: 75ch;
+  }
+}
+@media screen and (orientation: landscape) and (max-height: 430px) {
+  body .main__about .about__main {
+    gap: 0;
+  }
+  body .main__about .about__main .about__img img {
+    max-width: 100%;
+    max-block-size: 15rem;
+  }
+  body .main__about .about__main .about__text {
+    padding: 0.5rem;
+  }
+  body .main__about .about__main .about__text .text__container p {
+    font-size: 0.75em;
+    color: rgb(15, 14, 14);
+  }
+  body .main__about .about__main .about__text .text__container p span {
+    font-size: 1.2em;
+  }
+}
+body .main__services {
+  opacity: 0;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  position: absolute;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  gap: 3.5rem;
+  width: 100%;
+}
+body .main__services h1 {
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1.9em, 3.5vw, 2.5em);
+  font-weight: normal;
+}
+body .main__services .services__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 3.5rem;
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+}
+body .main__services .services__container .container__row {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-flow: row-reverse;
+  flex-flow: row-reverse;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  width: 100%;
+}
+body .main__services .services__container .container__row .row__img {
+  padding: 2rem;
+}
+body .main__services .services__container .container__row .row__img img {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  max-width: 100%;
+  max-block-size: 28rem;
+}
+body .main__services .services__container .container__row .row__desc {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+body .main__services .services__container .container__row .row__desc h3 {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1.4em, 3.5vw, 2em);
+  font-weight: normal;
+  text-align: center;
+}
+body .main__services .services__container .container__row .row__desc p {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(0.9em, 2vw, 1.2em);
+  font-weight: normal;
+  line-height: 1.5em;
+  text-align: center;
+  max-width: 40ch;
+}
+body .main__services .services__social {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1.4rem;
+}
+body .main__services .services__social .social__heading h4 {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1em, 2.5vw, 1.4em);
+  font-weight: normal;
+}
+body .main__services .services__social .social__list {
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  gap: 1rem;
+}
+body .main__services .services__social .social__list a {
+  color: rgb(75, 73, 73);
+  font-size: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  body .main__services {
+    gap: 1rem;
+    padding: 2rem;
+  }
+  body .main__services .services__container {
+    gap: 3.5rem;
+  }
+  body .main__services .services__container .container__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  body .main__services .services__container .container__row .row__desc {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  body .main__services .services__social {
+    padding: 2rem 2rem 1rem 2rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  body .main__services {
+    gap: 1rem;
+    padding: 2rem;
+  }
+  body .main__services .services__container {
+    gap: 3.5rem;
+  }
+  body .main__services .services__container .container__row {
+    gap: 1rem;
+  }
+  body .main__services .services__container .container__row .row__desc {
+    gap: 1rem;
+    padding: 1rem;
+  }
+  body .main__services .services__container .container__row .row__desc p {
+    max-width: 35ch;
+  }
+  body .main__services .services__social {
+    padding: 2rem 2rem 1rem 2rem;
+    text-align: center;
+  }
+  body .main__services .services__social .social__list {
+    gap: 1rem;
+  }
+}
+.main__all {
+  opacity: 0;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 3rem;
+  gap: 2rem;
+}
+.main__all .all__heading h1 {
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1.7em, 3.5vw, 2.5em);
+  font-weight: normal;
+}
+.main__all .all__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.main__all .all__container .all__list_3 {
+  z-index: 2;
+}
+.main__all .all__container .all__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.main__all .all__container .all__list .list__heading h2 {
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1.4em, 3.5vw, 1.9em);
+  font-weight: normal;
+}
+.main__all .all__container .all__list .cakes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+.main__all .all__container .all__list .cakes a i {
+  color: rgb(75, 73, 73);
+}
+.main__all .all__container .all__list .list__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  gap: 3rem;
+}
+.main__all .all__container .all__list .list__items .item__card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+}
+.main__all .all__container .all__list .list__items .item__card .card__img {
+  z-index: 2;
+  opacity: 1;
+  -webkit-transition: opacity 2s;
+  -o-transition: opacity 2s;
+  transition: opacity 2s;
+}
+.main__all .all__container .all__list .list__items .item__card .card__img img {
+  width: 230px;
+  height: 350px;
+}
+.main__all .all__container .all__list .list__items .item__card .card__desc {
+  padding: 1rem;
+  height: 350px;
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  -o-transition: opacity 2s;
+  transition: opacity 2s;
+}
+.main__all .all__container .all__list .list__items .item__card .card__desc p {
+  line-height: 1.4em;
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1.15em, 3.5vw, 1.3em);
+  font-weight: normal;
+}
+.main__all .all__container .all__list .list__items .item__card:hover img {
+  opacity: 0.1;
+}
+.main__all .all__container .all__list .list__items .item__card:hover .card__desc {
+  opacity: 1;
+}
+.main__all .all__container .all__list .list__items .item__card .card__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  gap: 2rem;
+  width: 220px;
+}
+.main__all .all__container .all__list .list__items .item__card .card__info .card__name {
+  text-align: center;
+  max-width: 220px;
+  height: 85px;
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1.15em, 3.5vw, 1.4em);
+  font-weight: normal;
+}
+.main__all .all__container .all__list .list__items .item__card .card__info .info__order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.main__all .all__container .all__list .list__items .item__card .card__info .info__order .price {
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1em, 3.5vw, 1.1em);
+  font-weight: normal;
+}
+.main__all .all__container .all__list .list__items .item__card .card__info .info__order .order__social {
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+.main__all .all__container .all__list .list__items .item__card .card__info .info__order .order__social span {
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1em, 3.5vw, 1.1em);
+  font-weight: normal;
+}
+.main__all .all__container .all__list .list__items .item__card .card__info .info__order .order__social i {
+  color: rgb(75, 73, 73);
+  font-size: clamp(1.1em, 3.5vw, 1.3em);
+}
+
+@media screen and (max-width: 490px) {
+  .main__all {
+    padding: 2rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .main__all .all__heading h1 {
+    text-align: center;
+  }
+  .main__all .all__container {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  .main__all .all__container .all__list {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .main__all .all__container .all__list .list__items {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .main__all .all__container .all__list .list__items .item__card .card__info .card__name {
+    height: auto;
+  }
+}
+@media screen and (min-width: 491px) and (max-width: 1024px) {
+  .main__all .all__heading h1 {
+    text-align: center;
+  }
+  .main__all .all__container {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .main__all .all__container .all__list {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .main__all .all__container .all__list .list__items {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .main__all .all__container .all__list .list__items .item__card .card__info .card__name {
+    height: auto;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1380px) {
+  .main__all .all__heading {
+    text-align: center;
+  }
+  .main__all .all__container {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .main__all .all__container .all__list {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .main__all .all__container .all__list .list__items {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+.main__cakes {
+  opacity: 0;
+  -webkit-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: opacity 0.9s cubic-bezier(0.77, 0, 0.18, 1);
+  position: absolute;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  gap: 3.5rem;
+  width: 100%;
+}
+.main__cakes .cakes__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 3.5rem;
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.main__cakes .cakes__container .container__list {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.main__cakes .cakes__container .container__list:nth-child(even) {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-flow: row-reverse;
+  flex-flow: row-reverse;
+}
+.main__cakes .cakes__container .container__list .list__img {
+  padding: 2rem;
+}
+.main__cakes .cakes__container .container__list .list__img img {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  max-width: 100%;
+  max-block-size: 28rem;
+}
+.main__cakes .cakes__container .container__list .list__desc {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.main__cakes .cakes__container .container__list .list__desc h1 {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1.9em, 3.5vw, 2.5em);
+  font-weight: normal;
+}
+.main__cakes .cakes__container .container__list .list__desc p {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  font-family: "Cormorant Infant", serif;
+  font-size: clamp(1em, 2.5vw, 1.2em);
+  font-weight: normal;
+  line-height: 1.5em;
+  text-align: center;
+  max-width: 40ch;
+}
+.main__cakes .cakes__container .container__list .list__desc .cakes__order {
+  padding-top: 3rem;
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  -o-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 1rem;
+}
+.main__cakes .cakes__container .container__list .list__desc .cakes__order .order__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  gap: 1rem;
+}
+.main__cakes .cakes__container .container__list .list__desc .cakes__order .order__social a i {
+  color: rgb(75, 73, 73);
+}
+
+@media screen and (max-width: 600px) {
+  .main__cakes {
+    padding: 2rem;
+  }
+  .main__cakes .cakes__container {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  .main__cakes .cakes__container .container__list {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+  .main__cakes .cakes__container .container__list:nth-child(even) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
+    flex-flow: column;
+  }
+  .main__cakes .cakes__container .container__list .list__desc:last-child {
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main__cakes {
+    padding: 2rem;
+  }
+  .main__cakes .cakes__container {
+    gap: 1rem;
+  }
+  .main__cakes .cakes__container .container__list .list__desc:last-child {
+    gap: 2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
