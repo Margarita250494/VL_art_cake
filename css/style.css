@@ -793,7 +793,7 @@ body .menu .main__menu .contacts__navigation .contacts__list .contacts__item a i
 }
 body .background__image {
   position: absolute;
-  background-image: url("/img/background.jpg");
+  background-image: url("/VL_art_cake/img/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   aspect-ratio: 1/1;
